@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/alexdejesus/dio_csharp/dio_csharp.csproj",
+      "projectUniqueName": "/home/alexdejesus/Bootcamp-XP-Inc.-Full-Stack-Developer/c_sharp/dio_csharp.csproj",
       "projectName": "dio_csharp",
-      "projectPath": "/home/alexdejesus/dio_csharp/dio_csharp.csproj",
+      "projectPath": "/home/alexdejesus/Bootcamp-XP-Inc.-Full-Stack-Developer/c_sharp/dio_csharp.csproj",
       "packagesPath": "/home/alexdejesus/.nuget/packages/",
-      "outputPath": "/home/alexdejesus/dio_csharp/obj/",
+      "outputPath": "/home/alexdejesus/Bootcamp-XP-Inc.-Full-Stack-Developer/c_sharp/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/home/alexdejesus/.nuget/NuGet/NuGet.Config"
