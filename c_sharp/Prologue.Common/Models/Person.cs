@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace prologue.Models
+namespace Prologue.Common.Models
 {
     public class Person
     {
