@@ -134,5 +134,16 @@ for (int i=1; i<=10; i++) {
 }
 */
 
-//Arrays:
+//Arrays: tamanho fixo, menos flexivel.
 
+int[] arrayInt = new int[3];//size = 3
+
+for (int i=0; i<arrayInt.Length; i++) {
+    arrayInt[i] = i;
+}
+
+//foreach: forma de precorrer arrays para acessar seu valores, porém não para edita-los.
+
+foreach (var item in arrayInt) {
+    Console.WriteLine($"{item}");
+}
