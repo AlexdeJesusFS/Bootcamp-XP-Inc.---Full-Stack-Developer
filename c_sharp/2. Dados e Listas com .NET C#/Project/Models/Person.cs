@@ -7,11 +7,20 @@ namespace Project.Models
 {
     public class Person
     {
+
+        public Person(string name, string lastName, int age) {
+            Name = name;
+            LastName = lastName;
+            Age = age;
+        }
+
+        //campo
         private string _name;
+
+        //propriedade
         public string Name {
-            get {
-                return _name;
-            }
+            //body expression:
+            get => _name;
 
             set {
                 if (string.IsNullOrEmpty(value)) {
@@ -21,14 +30,30 @@ namespace Project.Models
             }
         }
 
-        private int _age;
-        public int Age {
-            get {
-                return _age;
-            }
+        private string _lastName;
+        public string LastName {
+            get => _lastName;
 
             set {
-                if (int.IsNegative(value) || value == 0) {
+                if (string.IsNullOrEmpty(value)) {
+                    throw new ArgumentException("Name can't be empty!");
+                }
+                _lastName = value;
+            }
+        }
+
+        //propriedade somente leitura, pois o set é omitido possuindo apenas get.
+        public string CompleteName => $"{Name} {LastName}";
+
+        //campo
+        private int _age;
+
+        //propriedade
+        public int Age {
+            get => _age;
+
+            set {
+                if (value <= 0) {
                     throw new ArgumentException("Age can't be negative or zero!");
                 } else if (value < 18) {
                     throw new ArgumentException("Age can't be under 18!");
@@ -37,8 +62,9 @@ namespace Project.Models
             }
         }
 
+        //método
         public void Show() {
-            Console.WriteLine("");
+            Console.WriteLine($"Hi, I'm {CompleteName} and am {Age} years old.");
         }
     }
 }
