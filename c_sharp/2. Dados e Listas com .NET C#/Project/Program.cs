@@ -1,4 +1,5 @@
-﻿using Project.Models;
+﻿using Newtonsoft.Json;
+using Project.Models;
 using System.ComponentModel;
 using System.Diagnostics.Metrics;
 using System.Globalization;
@@ -60,7 +61,7 @@ static void ReadFile(string path) {
     }
 }
 
-//Bloco de exceção
+//Tratamento de exceções
 try {
     ReadFile("Arquivos/arquivo.txt");
 //usando catch when para capturar duas exceções e aplicar a mesma solução:
@@ -147,5 +148,27 @@ Console.WriteLine($"{result.Success}, {result.Lines}, {result.CountLines}");
 var (Success, Lines, _) = ReadFile(path: "Arquivos/arquivo.txt");
 Console.WriteLine($"{Success} {Lines} {"CountLines descartado pelo _"}");
 */
+/*
+//Serialização de objetos: Convertendo objeto em JSON
+using Newtonsoft.Json;
 
+DateTime date = DateTime.Now;
+Person person1 = new("Alex", "de Jesus", 20, date);
+Person person2 = new("Lexus", "Souza", 18, date);
+List<Person> listPerson = [person1, person2];
 
+string json = JsonConvert.SerializeObject(listPerson, Formatting.Indented); //converteu em json e identou
+Console.WriteLine(json);
+
+//escrevendo json em um arquivo:
+File.WriteAllText("Arquivos/person.json", json);
+*/
+//Deserialização de json: Convertendo JSON em objeto
+string json = File.ReadAllText("Arquivos/person.json");
+
+List<Person> listPerson = JsonConvert.DeserializeObject<List<Person>>(json);
+
+foreach (var i in listPerson)
+{
+    Console.WriteLine($"{i.CompleteName} {i.Age} {i.Date}");
+}

@@ -2,13 +2,14 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Newtonsoft.Json;
 
 namespace Project.Models
 {
     public class Person
     {
         //Construtor:
-        public Person(string name, string lastName, int age) {
+        public Person(string name, string lastName, int age, DateTime date) {
             Name = name;
             LastName = lastName;
             Age = age;
@@ -20,6 +21,9 @@ namespace Project.Models
             lastName = LastName;
             age = Age;
         }
+
+        private DateTime _date;
+        public DateTime Date {get; set;}
 
         //campo
         private string _name;
@@ -38,6 +42,10 @@ namespace Project.Models
         }
 
         private string _lastName;
+
+        //Newtonsoft.Json adiciona um metadado para informa outros nomes possiveis que podem ser aceitos/reconhecidos para uso da (se/dese)liarização
+        //É um Atributo: altera o comportamento do código, adicionando algo a mais ou somente informativo
+        [JsonProperty("Last_Name")]
         public string LastName {
             get => _lastName;
 
