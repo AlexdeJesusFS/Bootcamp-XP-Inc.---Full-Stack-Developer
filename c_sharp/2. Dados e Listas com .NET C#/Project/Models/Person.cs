@@ -7,11 +7,18 @@ namespace Project.Models
 {
     public class Person
     {
-
+        //Construtor:
         public Person(string name, string lastName, int age) {
             Name = name;
             LastName = lastName;
             Age = age;
+        }
+
+        //Desconstrutor: separa os valores do objeto em variaveis, um para cada valor informado:
+        public void Deconstruct(out string name, out string lastName, out int age) {
+            name = Name;
+            lastName = LastName;
+            age = Age;
         }
 
         //campo
