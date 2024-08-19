@@ -5,10 +5,14 @@ using System.Threading.Tasks;
 
 namespace Aulas.Models
 {
-    public class Pessoa(string nome, int idade)
+    //classe abstrata: criada somente para ser herdada, reutilizando dessa forma código. Não pode ser instanciada, pois contém meétodos não implemntados.
+    public abstract class Pessoa(string nome, int idade)
     {
         public string Nome { get; set; } = nome;
         public int Idade { get; set; } = idade;
+
+        //método abstrato: obrigatório a implementação deste método quando herdado.
+        public abstract void Hello();
 
         //vitual: indica que pode ser sobreescrito
         public virtual void Apresentar()

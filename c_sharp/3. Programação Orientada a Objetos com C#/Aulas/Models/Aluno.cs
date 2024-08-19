@@ -5,7 +5,8 @@ using System.Threading.Tasks;
 
 namespace Aulas.Models
 {
-    public class Aluno : Pessoa
+    //classe selada(sealed): esta classe não poderá ser herdada, não é capaz de ter filhos
+    public sealed class Aluno : Pessoa
     {
         public decimal Nota { get; set; }
 
@@ -13,6 +14,13 @@ namespace Aulas.Models
         public Aluno(string nome, int idade, decimal nota) : base(nome, idade)
         {
             Nota = nota;
+        }
+
+        //metodo abstrato herdado da classe pai, obritório implementar ou haverá uma exceção
+        //metodo selado: somente metodos virtual herdados podem ser do tipo selado, quando selado o metodo ser torna impossivel de ser sobreescrito por classes que vierem a herda ela
+        public sealed override void Hello()
+        {
+            Console.WriteLine("Eai! Tudo bem você?");
         }
 
         //overrride(substituir): indica que o metodo herdado será sobreescrito
