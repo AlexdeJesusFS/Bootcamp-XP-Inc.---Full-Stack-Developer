@@ -4,3 +4,6 @@
 [submodule "c_sharp/1. Sintaxe Básica com .NET C#/Desafio/trilha-net-fundamentos-desafio"]
 	path = "c_sharp/1. Sintaxe Básica com .NET C#/Desafio/trilha-net-fundamentos-desafio"
 	url = git@github.com:AlexdeJesusFS/trilha-net-fundamentos-desafio.git
+[submodule "c_sharp/3. Programação Orientada a Objetos com C#/Desafio/trilha-net-poo-desafio"]
+	path = "c_sharp/3. Programação Orientada a Objetos com C#/Desafio/trilha-net-poo-desafio"
+	url = git@github.com:AlexdeJesusFS/trilha-net-poo-desafio.git
