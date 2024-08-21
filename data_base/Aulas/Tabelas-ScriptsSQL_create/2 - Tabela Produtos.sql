@@ -4,9 +4,9 @@ CREATE TABLE Produtos (
 	Id int IDENTITY(1,1) PRIMARY KEY NOT NULL,
 	Nome varchar(255) NOT NULL,
 	Cor varchar(50) NULL,
-	Preco decimal(13, 2) NOT NULL,
+	Preco decimal(13, 2) NOT NULL,--decimal é mais compativel com o decimal do C#
 	Tamanho varchar(5) NULL,
-	Genero char(1) NULL
+	Genero char(1) NULL--melhor o uso de char quando se tem certeza do tamanho, pois ocupa menos espaço, economizando armazenamento
 )
 
 INSERT INTO Produtos VALUES ('Mountain Bike Socks, M','Branco','9.50','M','U')
