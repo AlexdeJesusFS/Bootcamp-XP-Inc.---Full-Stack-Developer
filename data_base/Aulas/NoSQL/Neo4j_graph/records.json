@@ -1,0 +1,37 @@
+﻿[
+  {
+    "n": {
+      "identity": 0,
+      "labels": [
+        "Client"
+      ],
+      "properties": {
+        "hobbies": [
+          "Caça agua-viva",
+          "Comer hambuguers"
+        ],
+        "name": "Bob Esponja",
+        "age": 28
+      },
+      "elementId": "4:c53c57d6-76b1-4707-beb0-6f656c4de000:0"
+    }
+  },
+  {
+    "n": {
+      "identity": 2,
+      "labels": [
+        "Client",
+        "Client_Premium"
+      ],
+      "properties": {
+        "hobbies": [
+          "comer",
+          "dormir",
+          "Caça agua-viva"
+        ],
+        "name": "Patrick Estrela"
+      },
+      "elementId": "4:c53c57d6-76b1-4707-beb0-6f656c4de000:2"
+    }
+  }
+]
