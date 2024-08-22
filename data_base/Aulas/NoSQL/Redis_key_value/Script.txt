@@ -1,0 +1,63 @@
+/*Redis (Remote Dictionary Server) é um banco de dados NoSQL de estrutura de dados em memória, orientado em chave-valor. Usado como cache, broker de mensagens, contador distribuído etc.
+Armazena dados em mémoria RAM, para aplicações de respostas rápidas e em tempo real.
+Redis não possui Scripts diretamente, mas podemos salvar seus comando em arquivos .sh ou .lua, este banco suporta linguaguem lua para criação de scripts mais complexos.
+
+Execução de arquivo.lua no cli do Redis:
+    redis-cli EVAL "$(cat script.lua)" 0
+
+Carregar o script para salva-lo e usar várias vezes:
+    redis-cli SCRIPT LOAD "$(cat script.lua)"
+    Retorna um hash como, abcdef1234567890.
+
+    Executando:
+    redis-cli EVALSHA abcdef1234567890 0
+*/
+--redis.call("COMNADO", chave, valor)
+--dentro da redis-cli: SET user1:name "Bob Esponja" 
+--Redis.call("SET", "user1:name", "Bob Esponja")
+
+
+--estão disponiveis 16 bancos para seleção - 0-15
+select 0 --para selecionar o banco
+
+--verificar se existe qualquer valor de chave
+KEYS *
+
+--pegar o valor da chave 'user1:name'
+GET user1:name
+
+--qualquer valor string pode ser atribuido na chave, como algo no formato JSON
+SET user2 '{"name": "Patrick", "age": 35}'
+
+--criar a chave-valor para durar 5 segundos. EX-segundos ou PX-milisegundos
+SET user2:name "Lula" EX 5
+
+--verificar se existe a chave
+EXISTS user1:name
+
+--criar uma chave com valor de lista:
+LPUSH user1.hobbies "caça agua-viva"
+
+--resgastar valor da lista: chave index_da_lista
+LINDEX user1.hobbies 0
+
+--resgastar um intervalo de index da lista
+LRANGE user1.hobbies 0 1
+
+--retornar o tipo de dados armazenado na chave
+TYPE user1:name
+
+--retornar o tempo de persistencia do da chave. -1 para chave sem tempo:
+TTL user1:name
+--retornar o tempo em milisegundos
+TTL user1:name
+
+--retirar o tempo de persistencia da chave, no caso ela vai deixar de ter tempo de expiração:
+PERSIST user2:name
+
+--deletar a chave:
+DEL user2:name
+
+
+
+
