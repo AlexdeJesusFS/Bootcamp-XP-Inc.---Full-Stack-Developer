@@ -1,0 +1,4 @@
+[
+    {"name": "Bob Esponja", "age": 20, "hobby": null},
+    {"name": "Patrick", "age": 25, "hobby": ["caça agua-viva", "comer", "dormir"]}
+]
