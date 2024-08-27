@@ -21,5 +21,12 @@ namespace API.Controllers
             };
             return Ok(obj);
         }
+
+        [HttpGet("Hello/{name}")]
+        public IActionResult Hello(string name)
+        {
+            var message = $"Hello {name}, welcome to API!";
+            return Ok(new {message});
+        }
     }
 }
