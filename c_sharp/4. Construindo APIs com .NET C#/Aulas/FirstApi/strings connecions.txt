@@ -1,0 +1,2 @@
+"DbConnection": "Server=localhost\\SQLEXPRESS;Database=Agenda;Trusted_connection=true;TrustServerCertificate=true;"
+
