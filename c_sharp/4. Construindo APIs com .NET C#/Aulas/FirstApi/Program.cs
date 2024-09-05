@@ -9,7 +9,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-builder.Services.AddDbContext<AgendaContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("DbConnection")));
+builder.Services.AddDbContext<AgendaContext>(options => options.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 // **Adiciona os serviços de controleadores ao contêiner**
 builder.Services.AddControllers();
