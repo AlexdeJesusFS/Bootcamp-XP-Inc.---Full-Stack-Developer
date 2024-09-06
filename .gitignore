@@ -46,3 +46,7 @@ ehthumbs.db
 
 # Recycle Bin used on file shares
 $RECYCLE.BIN/
+
+# Ignorar arquivos temporários do SQLite
+*.sqlite-wal
+*.sqlite-shm
