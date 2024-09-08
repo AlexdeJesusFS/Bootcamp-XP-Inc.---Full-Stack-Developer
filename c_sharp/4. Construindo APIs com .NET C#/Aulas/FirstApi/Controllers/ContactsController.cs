@@ -50,7 +50,7 @@ namespace FirstApi.Controllers
         {
             _context.Add(contact);
             _context.SaveChanges();
-            return Ok(contact);
+            return CreatedAtAction(nameof(GetId), new {id = contact.Id}, contact);
         }
 
         [HttpPut]
