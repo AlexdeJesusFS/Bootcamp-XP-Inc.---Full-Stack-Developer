@@ -6,6 +6,7 @@ using FirstApi.Context;
 using FirstApi.Entities;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using FirstApi.DTOs.Contact;
 
 namespace FirstApi.Controllers
 {
@@ -24,18 +25,25 @@ namespace FirstApi.Controllers
         //rotas com parametros não podem ter o mesmo nome, como contacts/{name} e contacts/{id}, O roteador não terá como saber se o valor fornecido deve ser tratado como um name ou um id.
         //Para rotas nomeadas assim usar constraints para indicar e limitar o tipo do parametro de rota
         [HttpGet("{id:int}")]
-        public IActionResult GetId(int id)
+        public IActionResult GetById(int id)
         {
             var contact = _context.Contacts.Find(id);
             if (contact == null) {
                 return NotFound();
-            } else {
-                return Ok(contact);
             }
+
+            var response = new ContactResponse
+            {
+                Id = contact.Id,
+                Name = contact.Name,
+                Phone = contact.Phone,
+                Active = contact.Active
+            };
+            return Ok(response);
         }
-        
-        [HttpGet("{name:string}")]
-        public IActionResult GetName(string name)
+
+        [HttpGet("{name}")]
+        public IActionResult GetByName(string name)
         {
             var contact = _context.Contacts.Where(x => x.Name.Contains(name));
             if (contact == null) {
@@ -46,11 +54,27 @@ namespace FirstApi.Controllers
         }
 
         [HttpPost]
-        public IActionResult Create(Contacts contact)
+        public IActionResult Create(ContactRequest request)
         {
+            //criando classe Entity/Model de contact para salvar no banco
+            var contact = new Contacts
+            {
+                Name = request.Name,
+                Phone = request.Phone,
+                Active = request.Active
+            };
             _context.Add(contact);
             _context.SaveChanges();
-            return CreatedAtAction(nameof(GetId), new {id = contact.Id}, contact);
+
+            //criando classe resposta de contact
+            var response = new ContactResponse
+            {
+                Id = contact.Id,
+                Name = contact.Name,
+                Phone = contact.Phone,
+                Active = contact.Active
+            };
+            return CreatedAtAction(nameof(GetById), new {id = contact.Id}, response);
         }
 
         [HttpPut]
@@ -71,7 +95,7 @@ namespace FirstApi.Controllers
         }
 
         [HttpDelete]
-        public IActionResult DeleteContact (int id)
+        public IActionResult DeleteContact(int id)
         {
             var contactDb = _context.Contacts.Find(id);
             if (contactDb == null) {
