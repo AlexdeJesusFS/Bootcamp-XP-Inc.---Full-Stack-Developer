@@ -7,6 +7,9 @@ using FirstApi.Entities;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using FirstApi.DTOs.Contact;
+using System.ComponentModel.DataAnnotations;
+using System.Text.Json.Serialization;
+
 
 namespace FirstApi.Controllers
 {
@@ -51,6 +54,20 @@ namespace FirstApi.Controllers
             } else {
                 return Ok(contact);
             }
+        }
+
+        [JsonConverter(typeof(JsonStringEnumConverter))]
+        public enum ContactStatus {
+            True, //0
+
+            False, //1
+        }
+        [HttpGet("{active:bool}")]
+        public IActionResult GetByStatus(ContactStatus active)
+        {
+            bool isActive = active == ContactStatus.True;
+            var contacts = _context.Contacts.Where(x => x.Active == isActive).ToList();
+            return Ok(contacts);
         }
 
         [HttpPost]
