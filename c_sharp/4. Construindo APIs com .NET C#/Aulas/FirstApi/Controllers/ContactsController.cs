@@ -77,7 +77,7 @@ namespace FirstApi.Controllers
             return CreatedAtAction(nameof(GetById), new {id = contact.Id}, response);
         }
 
-        [HttpPut]
+        [HttpPut("{id:int}")]
         public IActionResult Update(int id, Contacts contact)
         {
             var contactDb = _context.Contacts.Find(id);
@@ -94,7 +94,7 @@ namespace FirstApi.Controllers
             return Ok();
         }
 
-        [HttpDelete]
+        [HttpDelete("{id:int}")]
         public IActionResult DeleteContact(int id)
         {
             var contactDb = _context.Contacts.Find(id);
