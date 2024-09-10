@@ -10,3 +10,6 @@
 [submodule "data_base/Desafio/trilha-net-banco-de-dados-desafio"]
 	path = data_base/Desafio/trilha-net-banco-de-dados-desafio
 	url = git@github.com:AlexdeJesusFS/trilha-net-banco-de-dados-desafio.git
+[submodule "c_sharp/4. Construindo APIs com .NET C#/Desafios/trilha-net-api-desafio"]
+	path = "c_sharp/4. Construindo APIs com .NET C#/Desafios/trilha-net-api-desafio"
+	url = git@github.com:AlexdeJesusFS/trilha-net-api-desafio.git
