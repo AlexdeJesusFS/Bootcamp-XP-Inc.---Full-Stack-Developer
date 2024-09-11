@@ -13,3 +13,6 @@
 [submodule "c_sharp/4. Construindo APIs com .NET C#/Desafios/trilha-net-api-desafio"]
 	path = "c_sharp/4. Construindo APIs com .NET C#/Desafios/trilha-net-api-desafio"
 	url = git@github.com:AlexdeJesusFS/trilha-net-api-desafio.git
+[submodule "git_github/Desafio/dio-lab-open-source"]
+	path = git_github/Desafio/dio-lab-open-source
+	url = git@github.com:AlexdeJesusFS/dio-lab-open-source.git
