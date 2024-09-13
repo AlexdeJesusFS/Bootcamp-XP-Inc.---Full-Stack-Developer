@@ -16,3 +16,6 @@
 [submodule "git_github/Desafio/dio-lab-open-source"]
 	path = git_github/Desafio/dio-lab-open-source
 	url = git@github.com:AlexdeJesusFS/dio-lab-open-source.git
+[submodule "c_sharp/4. Construindo APIs com .NET C#/Desafios/ASP.NET-MINIMAL-API"]
+	path = "c_sharp/4. Construindo APIs com .NET C#/Desafios/ASP.NET-MINIMAL-API"
+	url = git@github.com:AlexdeJesusFS/ASP.NET-MINIMAL-API.git
