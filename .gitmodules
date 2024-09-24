@@ -19,3 +19,6 @@
 [submodule "c_sharp/4. Construindo APIs com .NET C#/Desafios/minimal-api"]
 	path = "c_sharp/4. Construindo APIs com .NET C#/Desafios/minimal-api"
 	url = git@github.com:AlexdeJesusFS/minimal-api.git
+[submodule "c_sharp/5. Trabalhando com Desenvolvimento Orientado a Testes/Desafios/trilha-net-testes-unitarios-desafio"]
+	path = c_sharp/5. Trabalhando com Desenvolvimento Orientado a Testes/Desafios/trilha-net-testes-unitarios-desafio
+	url = git@github.com:AlexdeJesusFS/trilha-net-testes-unitarios-desafio.git
