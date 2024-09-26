@@ -22,3 +22,6 @@
 [submodule "c_sharp/5. Trabalhando com Desenvolvimento Orientado a Testes/Desafios/trilha-net-testes-unitarios-desafio"]
 	path = c_sharp/5. Trabalhando com Desenvolvimento Orientado a Testes/Desafios/trilha-net-testes-unitarios-desafio
 	url = git@github.com:AlexdeJesusFS/trilha-net-testes-unitarios-desafio.git
+[submodule "c_sharp/5. Trabalhando com Desenvolvimento Orientado a Testes/Desafios/TDD-e-Testes-Unitarios-Usando-.NET-Core"]
+	path = c_sharp/5. Trabalhando com Desenvolvimento Orientado a Testes/Desafios/TDD-e-Testes-Unitarios-Usando-.NET-Core
+	url = git@github.com:AlexdeJesusFS/TDD-e-Testes-Unitarios-Usando-.NET-Core.git
