@@ -25,3 +25,6 @@
 [submodule "c_sharp/5. Trabalhando com Desenvolvimento Orientado a Testes/Desafios/TDD-e-Testes-Unitarios-Usando-.NET-Core"]
 	path = c_sharp/5. Trabalhando com Desenvolvimento Orientado a Testes/Desafios/TDD-e-Testes-Unitarios-Usando-.NET-Core
 	url = git@github.com:AlexdeJesusFS/TDD-e-Testes-Unitarios-Usando-.NET-Core.git
+[submodule "react/Desafios/trilha-react-desafio01-calculadora"]
+	path = react/Desafios/trilha-react-desafio01-calculadora
+	url = git@github.com:AlexdeJesusFS/trilha-react-desafio01-calculadora.git
