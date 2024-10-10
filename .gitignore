@@ -1,96 +1,108 @@
-###gitignore for C#
+### gitignore for C#
 # Build Directories
-bin/
-obj/
-dist/
-publish/
-artifacts/
+**/bin/
+**/obj/
+**/dist/
+**/publish/
+**/artifacts/
 
 # User-specific files
-*.user
-*.rsuser
-*.suo
-*.userosscache
-*.sln.docstates
+**/*.user
+**/*.rsuser
+**/*.suo
+**/*.userosscache
+**/*.sln.docstates
 
 # Mono Auto Generated Files
-mono_crash.*
+**/mono_crash.*
 
 # Windows image file caches
-Thumbs.db
-ehthumbs.db
+**/Thumbs.db
+**/ehthumbs.db
 
 # macOS system files
-.DS_Store
+**/.DS_Store
 
 # IDE directories
-.vscode/
-.idea/
-*.sln.iml
-*.vs/
+**/.vscode/
+**/.idea/
+**/*.sln.iml
+**/*.vs/
 
 # Rider specific files
-.idea_modules/
+**/.idea_modules/
 
 # Log files
-*.log
+**/*.log
 
 # Distribution packages
-*.nupkg
-*.snupkg
+**/*.nupkg
+**/*.snupkg
 
 # Backup files
-*.bak
-*.swp
-*.swo
+**/*.bak
+**/*.swp
+**/*.swo
 
 # Recycle Bin used on file shares
-$RECYCLE.BIN/
+**/$RECYCLE.BIN/
 
 # Ignorar arquivos temporários do SQLite
-*.sqlite-wal
-*.sqlite-shm
+**/*.sqlite-wal
+**/*.sqlite-shm
 
-# Dependências do Node.js
-/node_modules
-/.pnp
-.pnp.js
 
-# Diretórios de build
-/build
-/dist
+### gitignore for React
+# Dependencies
+**/node_modules/
+**/bower_components/
 
-# Arquivos de teste de produção
-/coverage
+# Production build
+**/build/
+**/dist/
 
-# Arquivos de ambiente local
-.env
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
+# Environment variables
+**/.env
+**/.env.local
+**/.env.development.local
+**/.env.test.local
+**/.env.production.local
 
-# Logs
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
+# Log files
+**/npm-debug.log*
+**/yarn-debug.log*
+**/yarn-error.log*
+**/pnpm-debug.log*
 
-# Relatórios do pacote npm
-report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
+# Editor directories and files
+**/.idea/
+**/.vscode/
+**/.nuxt/
 
-# Diretório de cache
-.cache
-# Cache do parcel-bundler
-.parcel-cache
+# Optional npm cache directory
+**/.npm/
 
-# IDEs e editores
-.vscode/
-.idea/
+# Webpack Stats
+**/stats.json
 
-# Arquivos de lock
-package-lock.json
-yarn.lock
+# Debug files
+**/debug.log*
+**/out.log*
 
-# Outros arquivos temporários
-.DS_Store
-Thumbs.db
+# Testing
+**/coverage/
+**/.nyc_output/
+
+# Lint cache
+**/.eslintcache
+**/.stylelintcache
+
+# Service Worker
+**/sw.js
+**/workbox-*.js
+
+# Temporary build files
+**/.next/
+**/.parcel-cache/
+**/.sass-cache/
+**/gatsby/.cache/
