@@ -1,0 +1,42 @@
+.content {
+    position: relative;
+
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+}
+
+.background {
+    height: 90vh;
+    position: absolute;
+    left: -260px;
+    opacity: 15%;
+}
+
+.info {
+    width: 60%;
+    margin-right: 90px;
+    margin-top: 40px;
+    color: #FFFFFF;
+}
+
+input {
+    border: 1px solid #999999;
+    border-radius: 22px;
+    margin-right: 12px;
+    min-width: 250px;
+    width: 80%; 
+    background: transparent;
+    font-size: 18px;
+    padding: 10px;
+}
+
+button {
+    border: 1px solid #999999;
+    border-radius: 22px;
+    margin-right: 12px;
+    background: #2D333B;
+    color: #FFF;
+    font-size: 18px;
+    padding: 10px;
+}
