@@ -29,6 +29,13 @@ input {
     background: transparent;
     font-size: 18px;
     padding: 10px;
+    color: #FFe;/*cor da letras do input*/
+}
+input:hover {
+    border: 1px solid #cbcbcb;
+}
+input:active {
+    border: 1px solid #3d3d3d;
 }
 
 button {
@@ -40,6 +47,12 @@ button {
     font-size: 18px;
     padding: 10px;
     width: 14%;
+}
+button:hover {
+    background-color: #7a7a7a;
+}
+button:active {
+    background-color: #3d3d3d;
 }
 
 .perfil {
