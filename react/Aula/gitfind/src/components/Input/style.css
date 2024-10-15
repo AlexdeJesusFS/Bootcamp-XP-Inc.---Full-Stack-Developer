@@ -1,0 +1,17 @@
+input {
+    border: 1px solid #999999;
+    border-radius: 22px;
+    margin-right: 12px;
+    min-width: 250px;
+    width: 78%; 
+    background: transparent;
+    font-size: 18px;
+    padding: 10px;
+    color: #FFe;/*cor da letras do input*/
+}
+input:hover {
+    border: 1px solid #cbcbcb;
+}
+input:active {
+    border: 1px solid #3d3d3d;
+}
