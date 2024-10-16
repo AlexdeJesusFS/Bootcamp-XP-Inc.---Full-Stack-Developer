@@ -28,3 +28,6 @@
 [submodule "react/Desafios/trilha-react-desafio01-calculadora"]
 	path = react/Desafios/trilha-react-desafio01-calculadora
 	url = git@github.com:AlexdeJesusFS/trilha-react-desafio01-calculadora.git
+[submodule "react/Desafios/Wiki-de-Reposit-rios-do-GitHub-Com-React"]
+	path = react/Desafios/Wiki-de-Reposit-rios-do-GitHub-Com-React
+	url = git@github.com:AlexdeJesusFS/Wiki-de-Reposit-rios-do-GitHub-Com-React.git
