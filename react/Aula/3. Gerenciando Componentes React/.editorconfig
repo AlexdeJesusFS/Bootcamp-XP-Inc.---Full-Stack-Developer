@@ -1,0 +1,29 @@
+# EditorConfig is awesome: https://EditorConfig.org
+
+# top-most EditorConfig file
+root = true
+
+# A nossa configuração de espaço em branco
+[*]
+indent_style = space        # Usar espaços em vez de tabulação
+indent_size = 2             # 2 espaços por nível de indentação
+end_of_line = lf            # Usar LF como final de linha
+charset = utf-8             # Usar UTF-8 como codificação
+trim_trailing_whitespace = true  # Remover espaços em branco no final das linhas
+insert_final_newline = true  # Inserir nova linha no final do arquivo
+max_line_length = 120       # Limite de comprimento de linha de 120 caracteres
+
+# Configurações específicas para arquivos JavaScript e JSX
+[*.{js,jsx}]
+indent_size = 2
+quote_type = single         # Usar aspas simples em vez de aspas duplas
+
+# Configurações específicas para arquivos TypeScript e TSX
+[*.{ts,tsx}]
+indent_size = 2
+quote_type = single         # Usar aspas simples em vez de aspas duplas
+
+# Configurações específicas para arquivos JSON
+[*.json]
+indent_style = space
+indent_size = 2
