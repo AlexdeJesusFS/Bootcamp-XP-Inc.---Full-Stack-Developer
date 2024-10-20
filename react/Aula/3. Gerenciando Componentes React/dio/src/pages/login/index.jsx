@@ -3,7 +3,8 @@ import { Button } from "../../components/Button";
 import { Header } from "../../components/Header";
 import { Input } from "../../components/Input";
 import { Container, Wrapper, Column, Row, Title, TitleLogin, SubTitleLogin, CriarConta, EsqueciSenha } 
-from "./styles"
+from "./styles";
+import { MdEmail, MdLock } from "react-icons/md";
 
 function Login() {
   return (
@@ -20,8 +21,8 @@ function Login() {
             <TitleLogin>Faça o seu cadastro</TitleLogin>
             <SubTitleLogin>Make the change._</SubTitleLogin>
             <form>
-              <Input placeholder="E-mail" />
-              <Input placeholder="Senha" type="password" />
+              <Input placeholder="E-mail" leftIcon={<MdEmail />}/>
+              <Input placeholder="Senha" type="password" leftIcon={<MdLock />}/>
               <Button variant="secondary">Entrar</Button>
             </form>
             <Row>
