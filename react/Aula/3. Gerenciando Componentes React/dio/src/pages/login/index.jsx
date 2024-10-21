@@ -5,8 +5,16 @@ import { Input } from "../../components/Input";
 import { Container, Wrapper, Column, Row, Title, TitleLogin, SubTitleLogin, CriarConta, EsqueciSenha } 
 from "./styles";
 import { MdEmail, MdLock } from "react-icons/md";
+import { useNavigate } from "react-router-dom"
 
 function Login() {
+
+  const navigate = useNavigate();
+
+  const handleClickSignIn = () => {
+    navigate('/feed')
+  }
+
   return (
     <>
       <Header />
@@ -23,7 +31,7 @@ function Login() {
             <form>
               <Input placeholder="E-mail" leftIcon={<MdEmail />}/>
               <Input placeholder="Senha" type="password" leftIcon={<MdLock />}/>
-              <Button variant="secondary">Entrar</Button>
+              <Button variant="secondary" onClick={handleClickSignIn} type='button'>Entrar</Button>
             </form>
             <Row>
               <EsqueciSenha>Esqueci a minha senha</EsqueciSenha>

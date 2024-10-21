@@ -48,7 +48,7 @@ export const FindInputContainer = styled.div`
 export const Menu = styled.a`
     font-family: 'Open Sans';
     font-style: normal;
-    font-size: 12px;
+    font-size: 15px;
     line-height: 25px;
     color: #fff;
     margin-right: 12px;
