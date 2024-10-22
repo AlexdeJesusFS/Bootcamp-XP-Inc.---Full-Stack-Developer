@@ -31,3 +31,6 @@
 [submodule "react/Desafios/Wiki-de-Reposit-rios-do-GitHub-Com-React"]
 	path = react/Desafios/Wiki-de-Reposit-rios-do-GitHub-Com-React
 	url = git@github.com:AlexdeJesusFS/Wiki-de-Reposit-rios-do-GitHub-Com-React.git
+[submodule "react/Desafios/Clone-DIO"]
+	path = react/Desafios/Clone-DIO
+	url = git@github.com:AlexdeJesusFS/Clone-DIO.git

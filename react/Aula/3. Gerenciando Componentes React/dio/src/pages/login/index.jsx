@@ -2,14 +2,18 @@
 import { Button } from "../../components/Button";
 import { Header } from "../../components/Header";
 import { Input } from "../../components/Input";
+
 import { Container, Wrapper, Column, Row, Title, TitleLogin, SubTitleLogin, CriarConta, EsqueciSenha } 
 from "./styles";
+
 import { MdEmail, MdLock } from "react-icons/md";
 import { useNavigate } from "react-router-dom"
 
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup"
 import * as yup from "yup"
+
+import { api } from '../../services/api'
 
 
 const schema = yup.object({
@@ -28,11 +32,20 @@ function Login() {
   })
   console.log(isValid, errors)
 
-  const onSubmit = data => console.log(data)
-
-  const handleClickSignIn = () => {
-    navigate('/feed')
+  const onSubmit = async formData => {
+    console.log('data: ', formData)
+    try {
+      const { data } = await api.get(`users?email=${formData.email}&password=${formData.password}`)
+      if (data.length === 1) {
+        navigate('/feed')
+      } else {
+        alert('Email ou senha inválido!')
+      }
+    } catch {
+      alert('Houve um erro durante login! Tente novamente.')
+    }
   }
+
 
   return (
     <>
