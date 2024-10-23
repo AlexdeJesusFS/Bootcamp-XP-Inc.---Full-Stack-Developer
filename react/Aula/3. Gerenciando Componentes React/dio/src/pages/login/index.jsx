@@ -23,6 +23,7 @@ const schema = yup.object({
 
 
 function Login() {
+  const colorIcons = '#8647AD';
 
   const navigate = useNavigate();
 
@@ -61,13 +62,15 @@ function Login() {
             <TitleLogin>Faça o seu cadastro</TitleLogin>
             <SubTitleLogin>Make the change._</SubTitleLogin>
             <form onSubmit={handleSubmit(onSubmit)}>
-              <Input name="email" errorMessage={errors?.email?.message} control={control} placeholder="E-mail" leftIcon={<MdEmail />}/>
-              <Input name="password" errorMessage={errors?.password?.message} control={control} placeholder="Senha" type="password" leftIcon={<MdLock />}/>
+              <Input name="email" errorMessage={errors?.email?.message} 
+              control={control} placeholder="E-mail" leftIcon={<MdEmail color={colorIcons} />}/>
+              <Input name="password" errorMessage={errors?.password?.message} 
+              control={control} placeholder="Senha" type="password" leftIcon={<MdLock color={colorIcons} />}/>
               <Button variant="secondary" type='submit'>Entrar</Button>
             </form>
             <Row>
               <EsqueciSenha>Esqueci a minha senha</EsqueciSenha>
-              <CriarConta>Criar uma conta</CriarConta>
+              <CriarConta onClick={() => navigate('/register')}>Criar uma conta</CriarConta>
             </Row>
           </Wrapper>
         </Column>

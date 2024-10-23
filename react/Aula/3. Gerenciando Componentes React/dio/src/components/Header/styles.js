@@ -58,6 +58,7 @@ export const Menu = styled.a`
 export const MenuRight = styled.a`
     font-family: 'Open Sans';
     font-style: normal;
+    font-weight: bold; 
     font-size: 12px;
     line-height: 25px;
     color: #fff;
@@ -70,6 +71,10 @@ export const UserPicture = styled.img`
     height: 32px;
     border-radius: 22px;
     border: 2px solid #fff;
+`
+
+export const LogoPicture = styled.img`
+    cursor: pointer;
 `
 
 export const Input = styled.input`
