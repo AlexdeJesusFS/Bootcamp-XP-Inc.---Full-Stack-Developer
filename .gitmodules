@@ -34,3 +34,6 @@
 [submodule "react/Desafios/Clone-DIO"]
 	path = react/Desafios/Clone-DIO
 	url = git@github.com:AlexdeJesusFS/Clone-DIO.git
+[submodule "react/Desafios/validando-dados-com-typescript"]
+	path = react/Desafios/validando-dados-com-typescript
+	url = git@github.com:AlexdeJesusFS/validando-dados-com-typescript.git
