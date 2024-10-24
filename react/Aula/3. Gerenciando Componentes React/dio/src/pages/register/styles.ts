@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import { Button } from '../../components/Button'
+import { ITitle, ITextLogin } from './types'
  
 
 export const Container = styled.main`
@@ -26,7 +27,7 @@ export const Column = styled.div`
     flex-shrink: 0;
 `
 
-export const Title = styled.h2`
+export const Title = styled.h2<ITitle>`
     width: 388px;
     left: 65px;
     margin-top: ${({margin_top}) => margin_top || '0px'};
@@ -56,7 +57,7 @@ export const Row = styled.div`
     gap: 8px;
 `
 
-export const TextLogin = styled.p`
+export const TextLogin = styled.p<ITextLogin>`
     color: ${({color}) => color || '#fff'};
     font-family: "Open Sans";
     font-size: 14px;

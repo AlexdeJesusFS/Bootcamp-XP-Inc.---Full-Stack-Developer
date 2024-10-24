@@ -5,6 +5,7 @@ import { Input } from "../../components/Input";
 
 import { Container, Wrapper, Column, Row, Title, TitleLogin, SubTitleLogin, CriarConta, EsqueciSenha } 
 from "./styles";
+import { IFormData } from "./types";
 
 import { MdEmail, MdLock } from "react-icons/md";
 import { useNavigate } from "react-router-dom"
@@ -18,7 +19,7 @@ import { api } from '../../services/api'
 
 const schema = yup.object({
   email: yup.string().email('email não é valido').required('email é obrigatorio'),
-  password: yup.number().min(5, 'Senha minima de 5 caracteres').required('senha é obrigatorio'),
+  password: yup.string().min(5, 'Senha minima de 5 caracteres').required('senha é obrigatorio'),
 }).required();
 
 
@@ -27,13 +28,13 @@ function Login() {
 
   const navigate = useNavigate();
 
-  const { control, handleSubmit, formState: { errors, isValid } } = useForm({
+  const { control, handleSubmit, formState: { errors, isValid } } = useForm<IFormData>({
     resolver: yupResolver(schema),
     mode: 'onChange'
   })
   console.log(isValid, errors)
 
-  const onSubmit = async formData => {
+  const onSubmit = async (formData: IFormData) => {
     console.log('data: ', formData)
     try {
       const { data } = await api.get(`users?email=${formData.email}&password=${formData.password}`)

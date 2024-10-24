@@ -1,12 +1,13 @@
-import React from 'react'
 import {
     Container, Row, Wrapper, FindInputContainer, Menu, MenuRight, Input, UserPicture, LogoPicture
 } from './styles'
 import { Button } from '../Button'
 import logo from '../../assets/logo-dio.png'
 import { useNavigate } from "react-router-dom"
+import { IHeader } from './types'
 
-function Header({authenticate}) {
+
+function Header({authenticate}: IHeader) {
 
     const navigate = useNavigate()
 

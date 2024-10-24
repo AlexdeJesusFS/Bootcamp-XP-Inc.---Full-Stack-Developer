@@ -1,4 +1,3 @@
-import React from 'react'
 import { 
     CardContainer, Content, HasInfo, ImageBackground, PostInfo, UserInfo, UserPicture 
 } from './styles'

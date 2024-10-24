@@ -4,6 +4,7 @@ import { Header } from '../../components/Header'
 import { Input } from '../../components/Input'
 
 import { Container, Title, Wrapper, Text, Column, Row, TextLogin, RegisterButton } from './styles'
+import { IFormData } from './types'
 
 import { MdEmail, MdLock } from "react-icons/md";
 import { FaUser } from "react-icons/fa";
@@ -20,7 +21,7 @@ import { api } from '../../services/api'
 const schema = yup.object({
   name: yup.string().min(10, 'nome deve ser de no mínimo 10 caracteres').required('nome é obrigatorio'),
   email: yup.string().email('email não é valido').required('email é obrigatorio'),
-  password: yup.number().min(5, 'senha minima de 5 caracteres').required('senha é obrigatorio'),
+  password: yup.string().min(5, 'senha minima de 5 caracteres').required('senha é obrigatorio'),
 }).required();
 
 
@@ -33,12 +34,12 @@ function Register() {
         navigate('/login')
     }
 
-    const { control, handleSubmit, formState: { errors } } = useForm({
+    const { control, handleSubmit, formState: { errors } } = useForm<IFormData>({
         resolver: yupResolver(schema),
         mode: 'onChange'
     })
 
-    const onSubmit = async formData => {
+    const onSubmit = async (formData: IFormData) => {
         try {
             const json_data =  {
                 "id": `${0}`, "name": `${formData.name}`,
