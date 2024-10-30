@@ -37,3 +37,9 @@
 [submodule "react/Desafios/validando-dados-com-typescript"]
 	path = react/Desafios/validando-dados-com-typescript
 	url = git@github.com:AlexdeJesusFS/validando-dados-com-typescript.git
+[submodule "react/Desafios/trilha-react-desafio-5"]
+	path = react/Desafios/trilha-react-desafio-5
+	url = git@github.com:digitalinnovationone/trilha-react-desafio-5.git
+[submodule "react/Desafios/DIO-Blog"]
+	path = react/Desafios/DIO-Blog
+	url = git@github.com:AlexdeJesusFS/DIO-Blog.git
