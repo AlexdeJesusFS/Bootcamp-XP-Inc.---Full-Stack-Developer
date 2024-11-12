@@ -64,7 +64,7 @@ Bootcamp separado por ferramenta/stack, onde cada pasta possui conteúdo para Au
 
 ---
 
-### 📘 **Counteúdo**
+### 📘 **Conteúdo**
 - Introdução ao Ambiente .NET e Projetos Colaborativos
 - Sintaxe Básica com .NET C#
 - Dados e Listas com .NET C#
